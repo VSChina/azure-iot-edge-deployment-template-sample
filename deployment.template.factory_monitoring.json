@@ -78,7 +78,7 @@
               "status": "running",
               "restartPolicy": "always",
               "settings": {
-                "image": "${ACR_ADDRESS_1}/humidityfiltermodule:0.0.416-amd64",
+                "image": "${ACR_ADDRESS_1}/humidityfiltermodule:0.0.7-amd64",
                 "createOptions": {
                     "threshold": 25
                 }
@@ -90,7 +90,7 @@
                 "status": "running",
                 "restartPolicy": "always",
                 "settings": {
-                  "image": "${ACR_ADDRESS_2}/temperaturefiltermodule:0.0.414-amd64",
+                  "image": "${ACR_ADDRESS_2}/temperaturefiltermodule:0.0.3-amd64",
                   "createOptions": {
                     "threshold": 25
                   }
