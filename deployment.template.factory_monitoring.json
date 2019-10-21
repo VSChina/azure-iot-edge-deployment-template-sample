@@ -11,14 +11,14 @@
               "loggingOptions": "",
               "registryCredentials": {
                 "my_acr1": {
-                  "username": "${ACR_USER_1}",
-                  "password": "${ACR_PASSWORD_1}",
-                  "address": "${ACR_ADDRESS_1}"
+                  "username": "${ACRUSER1}",
+                  "password": "${ACRPASSWORD1}",
+                  "address": "${ACRADDRESS1}"
                 },
                 "my_acr2": {
-                    "username": "${ACR_USER_2}",
-                    "password": "${ACR_PASSWORD_2}",
-                    "address": "${ACR_ADDRESS_2}"
+                    "username": "${ACRUSER2}",
+                    "password": "${ACRPASSWORD2}",
+                    "address": "${ACRADDRESS2}"
                   }
               }
             }
@@ -78,7 +78,7 @@
               "status": "running",
               "restartPolicy": "always",
               "settings": {
-                "image": "${ACR_ADDRESS_1}/humidityfiltermodule:0.0.19-amd64",
+                "image": "${ACRADDRESS1}/humidityfiltermodule:0.0.19-amd64",
                 "createOptions": {
                     "threshold": 25
                 }
@@ -90,7 +90,7 @@
                 "status": "running",
                 "restartPolicy": "always",
                 "settings": {
-                  "image": "${ACR_ADDRESS_2}/temperaturefiltermodule:0.0.18-amd64",
+                  "image": "${ACRADDRESS2}/temperaturefiltermodule:0.0.18-amd64",
                   "createOptions": {
                     "threshold": 25
                   }
