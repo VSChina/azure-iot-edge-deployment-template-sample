@@ -105,9 +105,14 @@ $senderOutput = $senderProcess.StandardOutput.ReadToEnd()
 $senderProcess.close()
 $senderProcess.Dispose()
 
-$process.WaitForExit($listenerWaitValue) 
-$listenerOutput = $process.StandardOutput.ReadToEnd()
 
+sleep -Seconds 60
+if(!$process.HasExited)
+{
+    $process.Kill()
+}
+
+$listenerOutput = $process.StandardOutput.ReadToEnd()
 
 Write-Host ("Test commnunication from module:$moduleId running on device:$deviceId to IOT Hub:$iotHubName by checking recieved iothub messages ...")
 
@@ -124,7 +129,3 @@ if($listenerOutput.Contains($deviceId) -and $listenerOutput.Contains($moduleId) 
     exit 1
 
  }
-
-
-$process.Close();
-$process.Dispose();
