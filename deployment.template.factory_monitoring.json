@@ -90,7 +90,7 @@
                 "status": "running",
                 "restartPolicy": "always",
                 "settings": {
-                  "image": "${ACRADDRESS2}/temperaturefiltermodule:0.0.18-amd64",
+                  "image": "${ACRADDRESS2}/temperaturefiltermodule:0.0.31-amd64",
                   "createOptions": {
                     "threshold": 25
                   }
